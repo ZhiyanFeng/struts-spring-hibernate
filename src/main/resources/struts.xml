@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="default" namespace="/" extends="struts-default">
+		<!-- get single user details -->
+		<!-- below class userDetailsAction is mapped in spring-config.xml file -->
+		<!-- action name="user" class="userDetailsAction" method="getAUserDetails"> 
+			<result name="success">/user.jsp</result> </action -->
+		<!-- get all users details -->
+		<action name="index">
+			<result>/index.jsp</result>
+		</action>
+		<action name="studentList" class="studentAction"
+			method="getAllStudents">
+			<result name="success">/WEB-INF/views/listStudents.jsp</result>
+		</action>
+		<action name="addStudentForm" class="studentAction"
+			method="addStudentForm">
+			<result name="success" >
+				/WEB-INF/views/addStudent.jsp
+			</result>
+		</action>
+		<action name="register" class="registerAction"
+			method="registerStudent">
+			<result name="success" type="redirectAction">studentList</result>
+
+		</action>
+	</package>
+</struts>
