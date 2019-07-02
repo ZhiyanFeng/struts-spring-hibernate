@@ -1,5 +1,5 @@
 # struts-spring-hibernate
-This small project is for an interview. Asked to finish in a week, finished in 4 days.
+This small project is for an interview. 
 The database design is in test.sql.
 The following is the screenshot of the requirement.
 
